@@ -1,0 +1,24 @@
+{
+    "name": "pjeutr/laravelvisjs",
+    "description": "Simple package to facilitate and automate the use of charts in Laravel 5.x using Visjs library",
+    "keywords": [
+      "visjs","laravel5","chart","reports","graphics", "pjeutr"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pjeutr",
+            "email": "laravelvisjs@pjeutr.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.6.4",
+      "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.*"
+    },
+
+    "autoload": {
+      "psr-4": {
+        "Pjeutr\\LaravelVisJs\\" : "src/"
+      }
+    }
+}
