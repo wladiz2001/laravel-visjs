@@ -7,7 +7,7 @@ use Pjeutr\LaravelVisJs\ChartPieAndDoughnut;
 use Pjeutr\LaravelVisJs\ChartRadar;
 use Illuminate\Support\ServiceProvider;
 
-class ChartjsServiceProvider extends ServiceProvider
+class VisjsServiceProvider extends ServiceProvider
 {
 
     /**

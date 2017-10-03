@@ -5,6 +5,7 @@
  */
 
 namespace Pjeutr\LaravelVisJs;
+use Log;
 
 class Builder
 {
@@ -23,7 +24,6 @@ class Builder
      */
     private $defaults = [
         'datasets' => [],
-        'labels'   => [],
         'type'     => 'line',
         'options'  => [],
         'size'     => ['width' => null, 'height' => null]
@@ -33,15 +33,10 @@ class Builder
      * @var array
      */
     private $types = [
-        'bar',
-        'horizontalBar',
-        'bubble',
-        'scatter',
-        'doughnut',
-        'line',
-        'pie',
-        'polarArea',
-        'radar'
+        'Network',
+        'Graph3d',
+        'Timeline',
+        'Graph2d'
     ];
 
     /**
@@ -64,16 +59,6 @@ class Builder
     public function element($element)
     {
         return $this->set('element', $element);
-    }
-
-    /**
-     * @param array $labels
-     *
-     * @return Builder
-     */
-    public function labels(array $labels)
-    {
-        return $this->set('labels', $labels);
     }
 
     /**
@@ -134,6 +119,11 @@ class Builder
         return $this;
     }
 
+    public function __toString() {
+        Log::error($chart['datasets']);  
+        return "kees";
+    }
+
     /**
      * @return mixed
      */
@@ -141,10 +131,11 @@ class Builder
     {
         $chart = $this->charts[$this->name];
 
-        return view('chart-template::chart-template')
+Log::error($chart['datasets']);     
+
+        return view('vis-template::vis-template')
                 ->with('datasets', $chart['datasets'])
                 ->with('element', $this->name)
-                ->with('labels', $chart['labels'])
                 ->with('options', isset($chart['options']) ? $chart['options'] : '')
                 ->with('optionsRaw', isset($chart['optionsRaw']) ? $chart['optionsRaw'] : '')
                 ->with('type', $chart['type'])
