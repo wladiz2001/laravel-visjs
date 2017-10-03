@@ -3,7 +3,8 @@
 
 Simple package to facilitate and automate the use of (network) charts in Laravel 5.x
 using the [Visjs](http://visjs.org/).
-Code is 'ported' [laravel-chartjs][from by https://github.com/fxcosta/laravel-chartjs]
+
+Code is 'ported' from [laravel-chartjs][https://github.com/fxcosta/laravel-chartjs]
 
 # Setup:
 ```
