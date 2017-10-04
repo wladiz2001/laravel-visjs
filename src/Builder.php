@@ -118,11 +118,6 @@ class Builder
         return $this;
     }
 
-    public function __toString() {
-        Log::error($chart['datasets']);  
-        return "kees";
-    }
-
     /**
      * @return mixed
      */
