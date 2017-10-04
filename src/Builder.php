@@ -5,7 +5,6 @@
  */
 
 namespace Pjeutr\LaravelVisJs;
-use Log;
 
 class Builder
 {
@@ -130,8 +129,6 @@ class Builder
     public function render()
     {
         $chart = $this->charts[$this->name];
-
-Log::error($chart['datasets']);     
 
         return view('vis-template::vis-template')
                 ->with('datasets', $chart['datasets'])
