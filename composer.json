@@ -1,5 +1,5 @@
 {
-    "name": "pjeutr/laravelvisjs",
+    "name": "wladiz2001/laravelvisjs",
     "description": "Simple package to facilitate and automate the use of charts in Laravel 5.x using Visjs library",
     "keywords": [
       "visjs","laravel5","chart","reports","graphics", "pjeutr"
